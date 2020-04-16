@@ -87,7 +87,7 @@ Op Log的格式 1 2 3 4 5 6 7 8 9 10 11  &#43;---------&#43;-----------&#43;----
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2018-06-30T16:39:33+00:00",
-        "dateModified": "2019-12-02T09:56:20+08:00",
+        "dateModified": "2020-04-16T18:47:55+08:00",
         "url": "https://example.com/posts/14/",
         "headline": "从零开始写数据库（四）",
         "description": "实现LevelDB的日志系统 参考设计文档Log Format\n前面创建了一个数据库，但是数据是存储在一个csv文件中，在实际的项目中，数据是以二进制的形式存储\n我们最终的目的是写一个类似levelDB的数据库，我们先要了解下LevelDB的运作机制\n在LevelDB中写入数据大概是这样几步\n 接收到请求Write(k, v) 把请求写入日志Op log 把数据写入MemTable 第三步完成就可以通知客户端写入成功了 当memtable的数据达到临界值的时候，转变成immutable memtable 压缩immutable memtable 写入sstable  这个信息量有点大，我们先来解释下几个名词\nOp log 这个Op是对数据做改变的操作，所以Put和Delete都会写入Op log\nop log文件是以块的形式存储的，每个块的大小固定为32KB,每个文件会有1个和多个块，这里我们简单点一个Block对应一个文件\n具体来说，最终会在磁盘上像0.log、1.log、2.log的形式存储\nOp Log的格式 1 2 3 4 5 6 7 8 9 10 11  +---------+-----------+-----------+--- .",
@@ -150,7 +150,7 @@ Op Log的格式 1 2 3 4 5 6 7 8 9 10 11  &#43;---------&#43;-----------&#43;----
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://example.com/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2018-06-30T16:39:33+00:00" />
-    <meta property="article:modified_time" content="2019-12-02T09:56:20+08:00" />
+    <meta property="article:modified_time" content="2020-04-16T18:47:55+08:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -263,7 +263,7 @@ Op Log的格式 1 2 3 4 5 6 7 8 9 10 11  &#43;---------&#43;-----------&#43;----
     
     
         
-        <time datetime="2019-12-02T09:56:20+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2019.12.2</time>
+        <time datetime="2020-04-16T18:47:55+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.4.16</time>
     
     
     
@@ -416,9 +416,9 @@ Op Log的格式 1 2 3 4 5 6 7 8 9 10 11  &#43;---------&#43;-----------&#43;----
 
 
         
-    <div class="updated-badge-container"><div title="Updated @ 2019-12-02 09:56:20 CST" style="cursor:help;display:inline-block">
+    <div class="updated-badge-container"><div title="Updated @ 2020-04-16 18:47:55 CST" style="cursor:help;display:inline-block">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2019-12-02</text><text x="915" y="140" textLength="650" transform="scale(.1)">2019-12-02</text></g></svg></div></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-04-16</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-04-16</text></g></svg></div></div>
 
 
         

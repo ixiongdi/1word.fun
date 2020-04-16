@@ -84,7 +84,7 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2018-06-29T16:28:49+00:00",
-        "dateModified": "2019-12-02T09:56:20+08:00",
+        "dateModified": "2020-04-16T18:47:55+08:00",
         "url": "https://example.com/posts/10/",
         "headline": "极致性能",
         "description": "前言 这篇文章主要讲目前我自己认为的最优化的性能解决方案\n目前来说程序的前后分离越来越明显，而且端也是越来越多\n简单点来说前端\n 传统的PC Web网页，虽然现在移动端盛行，但是例如企业官网、协同工作、网上商城、资讯类网站仍然需要一个传统的的WEB网站 iOS、Android手机类App，人类已经离不开手机了 移动端的H5，跨平台的解决方啊，因为小程序的出现破灭了 小程序，包括微信小程序和支付宝小程序，为了构建自己的商业闭环 快应用，各大手机厂商联合搞的，类似小程序。为了不被垄断  这么复杂的前端，导致了前后分离的越来越明显，后端越来越只提供API服务，前端SPA（单页应用）\n前后联动 一个完整的软件用户体验就是\n 用户操作 例如注册 反馈到到端 程序发起网络请求 DNS 网络请求通常都是域名访问、这一步会经过DNS解析拿到真实的IP地址。当然了直接写IP也行。 通常来说这一步几乎不存在性能瓶颈DNS会有缓存，这一步的瓶颈更多的是网络延迟。这一步的优化更多的是选择一个好的DNS服务商，节点更多、延迟更低，服务更稳定。目前来说免费的就够用了 API Gateway API网关，各大云服务商都有提供LBS，就我个人来说，必要性不是很大。如果说API流量很大，那么LBS目前的定制化功能是不够的，大公司一般会弄自己的LBS。对于小项目来说nginx足以。nginx也不会是性能的瓶颈，单机几百万并发。搞两个做备份绝大多数需求都能满足了 Micro Service 微服务，目前后端的趋势向微服务或Server Less方向发展。微服务的两大好处就是高可用和解决糅合。为啥子呢？高可用的意思就是其中一个服务挂了其他的要正常。保证不全面崩溃。解决糅合就是开发上协作分工，更快交付 Server Less 目前比较新的概念，无服务开发模式。啥意思？ 目前各大云服务厂商推出了各种云存储、云直播、云分析、云数据库。人们的开发模式发生了很大变化，不再购买服务器、不再购买带宽、不再自建数据库、不再购买磁盘。人们只需专注于产品本身。人们使用云服务厂商提供的API写程序。后来人们发现，既然我全部使用的是云，那么我干嘛程序不也用云呢。于是就诞生了如AMS Lambda这样的服务。但是这个概念太新，和云服务厂商绑定的太死，灵活度不够。目前来说还不太能大规模部署，但是可以小规模试用  那么问题来了，后端性能的瓶颈几乎就落在了microservice上面 首先从语言层面来说，参考The Computer Language Benchmarks Game",
@@ -144,7 +144,7 @@
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://example.com/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2018-06-29T16:28:49+00:00" />
-    <meta property="article:modified_time" content="2019-12-02T09:56:20+08:00" />
+    <meta property="article:modified_time" content="2020-04-16T18:47:55+08:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -257,7 +257,7 @@
     
     
         
-        <time datetime="2019-12-02T09:56:20+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2019.12.2</time>
+        <time datetime="2020-04-16T18:47:55+08:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.4.16</time>
     
     
     
@@ -415,9 +415,9 @@ API网关，各大云服务商都有提供LBS，就我个人来说，必要性�
 
 
         
-    <div class="updated-badge-container"><div title="Updated @ 2019-12-02 09:56:20 CST" style="cursor:help;display:inline-block">
+    <div class="updated-badge-container"><div title="Updated @ 2020-04-16 18:47:55 CST" style="cursor:help;display:inline-block">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2019-12-02</text><text x="915" y="140" textLength="650" transform="scale(.1)">2019-12-02</text></g></svg></div></div>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-04-16</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-04-16</text></g></svg></div></div>
 
 
         
